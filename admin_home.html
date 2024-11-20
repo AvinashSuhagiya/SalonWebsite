@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home | Curly Cutzz</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="admin_home.html" class="logo-link">
+                <img src="assets/logoos.png" alt="Curly Cutzz Logo" class="logo">
+            </a>
+            <div class="nav-links spicy-rice-regular">
+                <a href="index.html" onclick="logoutAdmin()">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="admin-welcome">
+            <h1>Welcome to the Admin Dashboard, <span id="adminName"></span>!</h1>
+            <p>Here are your upcoming appointments:</p>
+        </section>
+
+        <!-- Appointments Table -->
+        <section id="appointmentsSection">
+            <h2>Your Appointments</h2>
+            <table id="appointmentsTable" class="appointments-table">
+                <thead>
+                    <tr>
+                        <th>Services</th>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Total Cost</th>
+                        <th>Total Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Appointments will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="spicy-rice-regular">
+        <p>&copy; 2024 Curly Cutzz. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

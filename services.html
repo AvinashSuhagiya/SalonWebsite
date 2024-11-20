@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kaushan+Script&family=Spicy+Rice&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Left Corner Logo -->
+            <a href="home.html" class="logo-link">
+                <img src="assets/logoos.png" alt="Curly Cutzz Logo" class="logo">
+            </a>
+
+            <!-- Right Corner Navigation Links -->
+            <div class="nav-links spicy-rice-regular">
+                <a href="home.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="location.html">Location</a>
+                <a href="services.html">Services</a>
+                <a href="index.html" onclick="logoutAdmin()">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="kaushan-script-regular">Hairdresser Schedule</h2>
+            <!-- Schedule Table Container -->
+            <div id="scheduleContainer" class="architects-daughter-regular-table"></div>
+        </section>
+
+        <section>
+            <h2 class="kaushan-script-regular">Services</h2>
+            <!-- Services Table Container -->
+            <div id="servicesContainer" class="architects-daughter-regular-table"></div>
+        </section>
+
+        <!-- Button to open Add Service form -->
+        <section>
+            <button id="addServiceButton" class="add-service-button book-button" onclick="openAddServiceForm()">Add Service</button>
+        </section>
+
+        <section>
+            <h2 class="kaushan-script-regular">Booked Appointments</h2>
+            <div id="bookingContainer">
+                <table id="bookingTable" class="services-table architects-daughter-regular-table">
+                    <thead>
+                        <tr>
+                            <th>Stylist</th>
+                            <th>Services</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Total Cost</th>
+                            <th>Total Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Booked appointments will be appended here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Popup Form for Adding Service -->
+        <div id="addServiceForm" class="popup-form" style="display: none;">
+            <h3>Book an Appointment</h3>
+
+            <label>Select Services:</label>
+            <div id="serviceCheckboxes"></div> <!-- Container for service checkboxes -->
+
+            <label for="stylistSelect">Select Stylist:</label>
+            <select id="stylistSelect"></select>
+
+            <label for="appointmentDate">Select Date:</label>
+            <input type="date" id="appointmentDate">
+
+            <label for="startTimeSelect">Select Start Time:</label>
+            <select id="startTimeSelect"></select>
+
+            <label for="endTimeDisplay">End Time:</label>
+            <input type="text" id="endTimeDisplay" readonly>
+
+            <button class="add-service-button" onclick="bookAppointment()">Book Appointment</button>
+            <button onclick="closeAddServiceForm()">Cancel</button>
+        </div>
+
+
+    </main>
+    <footer class="spicy-rice-regular">
+        <p>&copy; 2024 Curly Cutzz. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>

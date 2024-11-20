@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kaushan+Script&family=Spicy+Rice&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="home.html">
+                <img src="assets/logoos.png" alt="Curly Cutzz Logo" class="logo">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="login-signup">
+            <!-- Login Form -->
+            <div id="loginForm" class="form-container">
+                <h2 class="form-title">Login</h2>
+                <label for="loginEmail" class="form-label">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail" class="form-input" required>
+
+                <label for="loginPassword" class="form-label">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" class="form-input" required>
+
+                <button type="button" class="form-button" onclick="loginClient()">Login</button>
+                <button type="button" class="form-button-secondary" onclick="toggleForms()">Register</button>
+                <button type="button" class="form-button-secondary" onclick="showAdminLogin()">Admin Login</button>
+            </div>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="form-container" style="display: none;">
+                <h2 class="form-title">Sign Up</h2>
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" id="firstName" name="firstName" class="form-input" placeholder="First Name" required>
+
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Last Name" required>
+
+                <label for="address" class="form-label">Address</label>
+                <input type="text" id="address" name="address" class="form-input" placeholder="Address">
+
+                <label for="city" class="form-label">City</label>
+                <input type="text" id="city" name="city" class="form-input" placeholder="City">
+
+                <label for="province" class="form-label">Province</label>
+                <select id="province" name="province" class="form-select">
+                    <option value="">Select Province</option>
+                    <option value="ON">Ontario</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="QC">Quebec</option>
+                    <!-- Add other provinces as needed -->
+                </select>
+
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" id="phone" name="phone" class="form-input" placeholder="(123) 456-7890" required>
+
+                <label for="postalCode" class="form-label">Postal Code</label>
+                <input type="text" id="postalCode" name="postalCode" class="form-input" placeholder="A1A 1A1" required>
+
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="a@b.ca" required>
+
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-input" required>
+
+
+                <button type="button" class="form-button" onclick="registerClient()">Register</button>
+                <button type="button" class="form-button-secondary" onclick="toggleForms()">Back to Login</button>
+            </form>
+
+            <!-- Admin Login Form -->
+            <div id="adminLoginForm" class="form-container" style="display: none;">
+                <h2 class="form-title">Admin Login</h2>
+                <label for="empId" class="form-label">Employee ID:</label>
+                <input type="text" id="empId" name="empId" class="form-input" required>
+
+                <label for="empName" class="form-label">Employee Name:</label>
+                <input type="text" id="empName" name="empName" class="form-input" required>
+
+                <button type="button" class="form-button" onclick="adminLogin()">Login as Admin</button>
+                <button type="button" class="form-button-secondary" onclick="toggleForms()">Back to Login</button>
+            </div>
+        </section>
+    </main>
+    <footer class="spicy-rice-regular">
+        <p>&copy; 2024 Curly Cutzz. All rights reserved.</p>
+    </footer>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
